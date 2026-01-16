@@ -1,0 +1,1008 @@
+/* Klammer rpa.css */
+
+/* Definición de paleta de colores */
+
+    :root {
+        --color-azul-energy:#1F4589; /* Azul Energy Blue*/
+        --color-amarillo-pure:#F7D600; /* Amarillo Pure Yellow */
+        --color-amarillo-forest: #F6C500; /*  Amarillo Forest */
+        --color-azul-deep: #162F7E; /* Azul Deep */
+        --color-blanco-ostion: #F3F1EE; /* Blanco Ostion */
+        --color-blanco-mixto: #F6F7F4; /* Blanco Mixto */
+        --color-blanco: #FFFFFF; /* Blanco puro */
+    }
+
+/* Definición de estilos de fuentes */
+
+    @font-face {
+    font-family: 'Helvetica';
+    src: 
+        url('../fonts/helvetica-font/Helvetica-Font/Helvetica.ttf') format('truetype'),
+        url('../fonts/helvetica-font/Helvetica-Bold.ttf') format('truetype'),
+        url('../fonts/helvetica-font/Helvetica-BoldOblique.ttf') format('truetype'),
+        url('../fonts/helvetica-font/Helvetica-Oblique.ttf') format('truetype'),
+        url('../fonts/helvetica-font/helvetica-light-587ebe5a59211.ttf') format('truetype'),
+        url('../fonts/helvetica-font/helvetica-compressed-5871d14b6903a.otf') format('opentype'),
+        url('../fonts/helvetica-font/helvetica-rounded-bold-5871d05ead8de.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: "Calling Code";
+    src: url('../fonts/calling_code/CallingCode-Regular.ttf') format('truetype'),
+        url('../fonts/calling_code/CallingCode-Regular.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    }
+
+    /* Reset básico de estilos */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Definiciones generales */
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Helvetica', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: var(--color-blanco-ostion);
+        overflow-x: hidden;
+    }
+
+    /* Estilos específicos para la página de RPA */
+
+    /* RPA Hero Section */
+
+    .rpa-hero {
+        position: relative;
+        margin-top: 80px;
+        padding: 1.5rem 2rem;
+        text-align: center;
+        background-color: var(--color-blanco);
+        overflow: hidden;
+        height: 527px;
+    }
+
+    .rpa-hero-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 1;
+        background-color: var(--color-blanco);
+    }
+
+    /* El contenido encima del video */
+    .rpa-hero h1,
+    .rpa-hero p,
+    .rpa-hero .rpa-description-card {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Opcional: para mejorar la legibilidad del texto */
+    .rpa-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.4);
+        z-index: 0;
+    }
+
+    .rpa-hero h1 {
+        font-size: 3rem;
+        color: var(--color-blanco);
+        margin-bottom: 2rem;
+        line-height: 1.2;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rpa-description-wrapper {
+        margin-top: 330px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .rpa-description-card {
+        max-width: 1000px;
+        margin: 0;
+        padding: 2rem;
+        border-radius: 10px;
+        opacity: 1;
+    }
+
+    .rpa-description-card p {
+        text-align: center;
+        color: var(--color-blanco-mixto);
+        font-size: 1.3rem;
+        font-style: italic;
+    }
+
+    /* Sección: ¿Qué es? */
+    /* -------------------- */
+    /* Sección: ¿Qué es? animada */
+    /* -------------------- */
+
+    .rpa-que-es-nosotros {
+        padding: 5rem 2rem;
+        background: var(--color-blanco-mixto);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Grid */
+    .rpa-content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    /* Columna izquierda */
+    .rpa-left-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .rpa-left-column h1 {
+        color: var(--color-azul-energy);
+        font-size: 2.4rem;
+        margin-bottom: 0;
+        text-align: center;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .rpa-left-column h1:hover {
+        transform: scale(1.05);
+        color: var(--color-amarillo-pure);
+    }
+
+    /* Cards */
+    .rpa-info-card {
+        background-color: var(--color-blanco-mixto);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+    }
+
+    .rpa-info-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        background-color: #fffef3;
+    }
+
+    .rpa-info-card p {
+        color: var(--color-azul-energy);
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    /* Columna derecha: ecuación */
+    .rpa-right-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+    }
+
+    .rpa-equation {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Items de ecuación */
+    .rpa-equation-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .rpa-equation-item:hover {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .rpa-equation-icon {
+        width: 80px;
+        height: 80px;
+        background: radial-gradient(circle at top left, var(--color-amarillo-pure), var(--color-blanco));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        color: var(--color-azul-energy);
+        box-shadow: 0 0 0 rgba(255, 215, 0, 0.4);
+        animation: iconPulse 3s infinite ease-in-out;
+    }
+
+    /* Pulso de iconos */
+    @keyframes iconPulse {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 rgba(255,215,0,0.4);
+        }
+        50% {
+            transform: scale(1.08);
+            box-shadow: 0 0 15px rgba(255,230,80,0.5);
+        }
+    }
+
+    /* Operadores */
+    .rpa-equation-operator {
+        font-size: 2rem;
+        color: var(--color-azul-energy);
+        font-weight: bold;
+    }
+
+    /* Último item resultado */
+    .rpa-equation-item.result .rpa-equation-icon {
+        background: radial-gradient(circle at top left, var(--color-azul-energy), var(--color-blanco-mixto));
+        color: var(--color-amarillo-pure);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .rpa-content-wrapper {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .rpa-right-column {
+            padding-top: 2rem;
+        }
+    }
+
+    /* -------------------- */
+    /* Sección: ¿Por qué RPA? animada */
+    /* -------------------- */
+
+    .why-rpa {
+        padding: 5rem 2rem;
+        background: var(--color-blanco);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .why-rpa h2 {
+        text-align: center;
+        color: var(--color-azul-energy);
+        font-size: 2.4rem;
+        margin-bottom: 3.5rem;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .why-rpa h2:hover {
+        transform: scale(1.05);
+        color: var(--color-amarillo-pure);
+    }
+
+    /* Grid */
+    .why-rpa-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 3rem;
+    }
+
+    /* Cards */
+    .why-rpa-item {
+        background-color: var(--color-blanco-ostion);
+        padding: 2.5rem 1.8rem;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        border-left: 4px solid var(--color-amarillo-pure);
+        transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Card hover */
+    .why-rpa-item:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        background-color: #fffef3;
+    }
+
+    /* Efecto shimmer en hover */
+    .why-rpa-item::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: all 0.5s ease;
+    }
+
+    .why-rpa-item:hover::after {
+        left: 100%;
+    }
+
+    /* Íconos */
+    .why-rpa-icon {
+        width: 80px;
+        height: 80px;
+        background: radial-gradient(circle at top left, var(--color-blanco), var(--color-blanco-mixto));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.2rem;
+        font-size: 2.2rem;
+        color: var(--color-amarillo-pure);
+        box-shadow: 0 0 0 rgba(255,215,0,0.4);
+        transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+        animation: iconPulse 3s infinite ease-in-out;
+    }
+
+    .why-rpa-item:hover .why-rpa-icon {
+        transform: rotate(10deg) scale(1.1);
+        color: var(--color-azul-energy);
+        box-shadow: 0 0 25px rgba(255,230,100,0.6);
+    }
+
+    /* Titles inside cards */
+    .why-rpa-item h3 {
+        color: var(--color-azul-energy);
+        font-size: 1.25rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .why-rpa-item:hover h3 {
+        color: var(--color-amarillo-pure);
+    }
+
+    /* Animación íconos (pulso) */
+    @keyframes iconPulse {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 rgba(255,215,0,0.4);
+        }
+        50% {
+            transform: scale(1.08);
+            box-shadow: 0 0 15px rgba(255,230,80,0.5);
+        }
+    }
+
+    /* Último card centrado si es impar */
+    .why-rpa-grid > .why-rpa-item:nth-child(odd):last-child {
+        grid-column: 1 / -1;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .why-rpa-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Sección: ¿Cómo funciona? */
+    .how-it-works {
+        padding: 6rem 2rem;
+        background: linear-gradient(180deg, var(--color-blanco-mixto) 0%, var(--color-blanco) 100%);
+    }
+
+    /* -------- TÍTULO -------- */
+    .how-it-works h2 {
+        text-align: center;
+        color: var(--color-azul-energy);
+        font-size: 2.6rem;
+        margin-bottom: 3.5rem;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .how-it-works h2:hover {
+        transform: scale(1.05);
+        color: var(--color-amarillo-pure);
+    }
+
+    /* Descripciones */
+    .description-how-it-works {
+        max-width: 900px;
+        margin: 0 auto 3rem;
+        text-align: center;
+        color: var(--color-azul-energy);
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    /* Grid de iconos */
+    .how-it-works-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 3rem;
+        justify-items: center;
+    }
+
+    /* Items sin card */
+    .how-card {
+        text-align: center;
+        position: relative;
+        background: transparent;
+        border: none;
+        transition: transform 0.3s ease;
+    }
+
+    .how-card:hover {
+        transform: translateY(-6px);
+    }
+
+    /* Iconos circulares */
+    .how-card-icon {
+        width: 140px;
+        height: 140px;
+        background: var(--color-blanco-ostion);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.8rem;
+        font-size: 3.2rem;
+        color: var(--color-amarillo-pure);
+        border: 4px solid rgba(0,0,0,0.15);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        transition: all 0.4s ease;
+        animation: iconPulse 3s infinite ease-in-out;
+    }
+
+    .how-card:hover .how-card-icon {
+        background-color: var(--color-amarillo-pure);
+        color: var(--color-blanco);
+        border-color: rgba(255,230,100,0.8);
+        box-shadow: 0 0 25px rgba(255,230,80,0.6);
+        transform: scale(1.12) rotate(8deg);
+    }
+
+    /* Titles */
+    .how-card h3 {
+        color: var(--color-azul-energy);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .how-card:hover h3 {
+        color: var(--color-amarillo-pure);
+    }
+
+    /* Párrafos */
+    .how-card p {
+        color: var(--color-azul-energy);
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    /* Card semitransparente para la descripción final */
+    .description-how-it-works-card {
+        max-width: 900px;
+        margin: 3rem auto 0;
+        padding: 2rem 2.5rem;
+        text-align: center;
+        background: linear-gradient(135deg, rgba(255,243,210,0.8), rgba(255,235,180,0.6));
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        backdrop-filter: blur(8px);
+        color: var(--color-azul-energy);
+        font-size: 1.05rem;
+        line-height: 1.8;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .description-how-it-works-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    /* Animación pulso iconos */
+    @keyframes iconPulse {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 rgba(255,215,0,0.3);
+        }
+        50% {
+            transform: scale(1.08);
+            box-shadow: 0 0 20px rgba(255,230,80,0.5);
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+        .how-it-works-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .how-card-icon {
+            width: 120px;
+            height: 120px;
+            font-size: 2.8rem;
+        }
+
+        .how-card h3 {
+            font-size: 1.25rem;
+        }
+
+        .how-card p {
+            font-size: 0.95rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .how-card-icon {
+            width: 100px;
+            height: 100px;
+            font-size: 2.5rem;
+        }
+    }
+
+    /* Sección: Beneficios */
+    .rpa-benefits {
+        padding: 4rem 2rem;
+        background-color: var(--color-blanco);
+    }
+
+    .rpa-benefits h2 {
+        text-align: center;
+        color: var(--color-azul-energy);
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Sección: Beneficios RPA */
+
+    .rpa-benefits {
+        padding: 6rem 2rem;
+        background: linear-gradient(180deg, var(--color-blanco) 0%, var(--color-blanco-mixto) 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* -------- TÍTULO -------- */
+    .rpa-benefits h2 {
+        text-align: center;
+        color: var(--color-azul-energy);
+        font-size: 2.6rem;
+        margin-bottom: 4rem;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .rpa-benefits h2:hover {
+        transform: scale(1.05);
+        color: var(--color-amarillo-pure);
+    }
+
+    /* -------- GRID -------- */
+    .rpa-benefits-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        position: relative;
+    }
+
+    /* -------- ITEMS -------- */
+    .rpa-benefit-card {
+        padding: 4rem 2.5rem;
+        text-align: center;
+        border-right: 3px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        background-color: transparent;
+    }
+
+    /* Eliminar borde derecho de la última columna */
+    .rpa-benefit-card:nth-child(3n) {
+        border-right: none;
+    }
+
+    /* Eliminar borde inferior de la última fila */
+    .rpa-benefit-card:nth-child(n+4) {
+        border-bottom: none;
+    }
+
+    /* -------- ICONOS -------- */
+    .rpa-benefit-icon {
+        width: 110px;
+        height: 110px;
+        background: radial-gradient(circle at top left, var(--color-blanco), var(--color-blanco-mixto));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.8rem;
+        font-size: 3rem;
+        color: var(--color-amarillo-pure);
+        transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+        animation: iconPulseHow 3s infinite ease-in-out;
+    }
+
+    /* Hover dinámico igual que en las otras secciones */
+    .rpa-benefit-card:hover .rpa-benefit-icon {
+        transform: rotate(12deg) scale(1.18);
+        color: var(--color-azul-energy);
+        box-shadow: 0 0 30px rgba(255, 230, 100, 0.6);
+    }
+
+    /* -------- TEXTO -------- */
+    .rpa-benefit-card h3 {
+        color: var(--color-azul-energy);
+        font-size: 1.3rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .rpa-benefit-card:hover h3 {
+        color: var(--color-amarillo-pure);
+    }
+
+    /* -------- RESPONSIVE -------- */
+    @media (max-width: 768px) {
+        .rpa-benefits-grid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .rpa-benefit-card {
+            padding: 3rem 2rem;
+        }
+
+        .rpa-benefit-card:nth-child(3n) {
+            border-right: 3px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .rpa-benefit-card:nth-child(2n) {
+            border-right: none;
+        }
+
+        .rpa-benefit-card:nth-child(n+4) {
+            border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .rpa-benefit-card:nth-child(n+5) {
+            border-bottom: none;
+        }
+
+        .rpa-benefit-icon {
+            width: 90px;
+            height: 90px;
+            font-size: 2.6rem;
+        }
+    }
+
+    /* CTA Final */
+    .rpa-cta-final {
+        padding: 4rem 2rem;
+        background-color: var(--color-blanco-ostion);
+        text-align: center;
+    }
+
+    .rpa-cta-final h2 {
+        color: var(--color-azul-energy);
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .rpa-cta-final h2:hover {
+        transform: scale(1.05);
+        color: var(--color-amarillo-pure);
+    }
+
+    .rpa-cta-final p {
+        color: var(--color-azul-energy);
+        font-size: 1.05rem;
+        line-height: 1.8;
+        max-width: 900px;
+        margin: 0 auto 2rem;
+    }
+
+    .cta-button {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .btn-primary {
+        display: inline-block;
+        background-color: var(--color-azul-energy);
+        color: var(--color-blanco);
+        padding: 1rem 2.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.05rem;
+        transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--color-azul-deep);
+        transform: scale(1.05);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .rpa-benefits-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Ecuación visual en la sección ¿Qué es? */
+    .rpa-equation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 520px;
+    }
+
+    .rpa-equation-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 92px;
+    text-align: center;
+    }
+
+    .rpa-equation-item .rpa-equation-icon {
+    width: 84px;
+    height: 84px;
+    border-radius: 14px;
+    background: var(--color-blanco-mixto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--color-amarillo-pure);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .rpa-equation-item.result .rpa-equation-icon {
+    border-radius: 18px;
+    transform: scale(1.04);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    }
+
+    .rpa-equation-label {
+    color: var(--color-azul-energy);
+    font-weight: 700;
+    font-size: 0.95rem;
+    }
+
+    /* operadores + = */
+    .rpa-equation-operator {
+    font-size: 1.6rem;
+    color: var(--color-azul-energy);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    }
+
+    /* make sure it fits inside right column */
+    .rpa-right-column { display:flex; justify-content:center; align-items:center; padding-top:0; }
+
+    /* Responsive: colapsa la ecuación en móviles a una fila envolvente vertical */
+    @media (max-width: 680px) {
+    .rpa-equation {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        max-width: 100%;
+        padding: 0.25rem;
+    }
+    .rpa-equation-operator { width: auto; font-size: 1.25rem; }
+    .rpa-equation-item .rpa-equation-icon { width:64px; height:64px; font-size:1.5rem; }
+    .rpa-equation-label { font-size:0.9rem; }
+    }
+
+    /* Two-column layout con línea divisoria para ¿Por qué RPA? */
+    .two-col-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem 2rem;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+    }
+
+    /* central divider line */
+    .two-col-split::before {
+    content: "";
+    position: absolute;
+    top: 0.75rem;
+    bottom: 0.75rem;
+    left: 50%;
+    width: 1px;
+    background: rgba(0,0,0,0.04);
+    transform: translateX(-0.5px);
+    pointer-events: none;
+    }
+
+    /* style items to behave like cards in two columns */
+    .two-col-split .why-rpa-item {
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    text-align:left;
+    padding:1.25rem 1.5rem;
+    }
+
+    /* icon container small square to match reference */
+    .two-col-split .why-rpa-icon {
+    width:56px;
+    height:56px;
+    border-radius:10px;
+    font-size:1.25rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0;
+    }
+
+    /* center divider hidden on small screens */
+    @media (max-width: 768px) {
+    .two-col-split { grid-template-columns: 1fr; }
+    .two-col-split::before { display: none; }
+    .two-col-split .why-rpa-item { text-align:center; justify-content:center; flex-direction:column; gap:0.75rem; }
+    .two-col-split .why-rpa-icon { margin-bottom:0.4rem; }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .rpa-content-wrapper {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .rpa-left-column h1 {
+            text-align: center;
+        }
+
+        .rpa-info-card p {
+            text-align: center;
+        }
+
+        .how-it-works-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .rpa-benefits-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .why-rpa-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .rpa-hero {
+            padding: 3rem 1.5rem;
+            height: 450px;
+        }
+
+        .rpa-description-wrapper {
+            margin-top: 280px;
+        }
+
+        .rpa-hero h1 {
+            font-size: 2rem;
+        }
+
+        .rpa-description-card p {
+            font-size: 1.1rem;
+        }
+
+        .rpa-que-es-nosotros,
+        .why-rpa,
+        .how-it-works,
+        .rpa-benefits,
+        .rpa-cta-final {
+            padding: 3rem 1.5rem;
+        }
+
+        .rpa-left-column h1,
+        .rpa-cta-final h2,
+        .why-rpa h2,
+        .rpa-benefits h2,
+        .how-it-works h2 {
+            font-size: 1.8rem;
+        }
+
+        .rpa-info-card p,
+        .rpa-cta-final p {
+            font-size: 1rem;
+        }
+
+        .rpa-benefits-grid,
+        .why-rpa-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .rpa-hero {
+            height: 400px;
+        }
+
+        .rpa-description-wrapper {
+            margin-top: 250px;
+        }
+
+        .rpa-hero h1 {
+            font-size: 1.6rem;
+        }
+
+        .rpa-description-card p {
+            font-size: 1rem;
+        }
+
+        .rpa-que-es-nosotros,
+        .why-rpa,
+        .how-it-works,
+        .rpa-benefits,
+        .rpa-cta-final {
+            padding: 2.5rem 1.2rem;
+        }
+
+        .how-card,
+        .rpa-benefit-card,
+        .why-rpa-item {
+            padding: 1.5rem;
+        }
+
+        .btn-primary {
+            padding: 0.8rem 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .rpa-icons-container {
+            padding: 1.5rem;
+        }
+    }
